@@ -29,7 +29,9 @@ if st.button("Predict"):
     features = np.array([[air_temp, process_temp, rot_speed, torque, tool_wear,
                           type_H, type_L, type_M]])
     prediction = model.predict(features)[0]
+    failure_prob = model.predict_proba(features)[0]
+
     if prediction == 1:
-        st.error("⚠ Machine is likely to fail.")
+        st.error("⚠ Machine is likely to fail (failure probability: {:.2f}%)".format(failure_prob[0][1] * 100))
     else:
-        st.success("✅ Machine is not likely to fail.")
+        st.success("✅ Machine is not likely to fail (failure probability: {:.2f}%)".format(failure_prob[0][1] * 100))
