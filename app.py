@@ -32,6 +32,6 @@ if st.button("Predict"):
     failure_prob = model.predict_proba(features)[0]
 
     if prediction == 1:
-        st.error("⚠ Machine is likely to fail (failure probability: {:.2f}%)".format(failure_prob[0][1] * 100))
+        st.error("⚠ Machine is likely to fail (failure probability: {:.2f}%)".format(failure_prob[1] * 100))
     else:
-        st.success("✅ Machine is not likely to fail (failure probability: {:.2f}%)".format(failure_prob[0][1] * 100))
+        st.success("✅ Machine is not likely to fail (failure probability: {:.2f}%)".format(failure_prob[1] * 100))
