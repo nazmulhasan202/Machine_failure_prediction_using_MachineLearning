@@ -7,8 +7,11 @@ import pandas as pd
 model = joblib.load("failure_prediction_model.joblib")
 
 st.title("Machine Failure Prediction")
-st.write("This demo predicts the likelihood of machine failure based on sensor readings. "
-         "The model was trained on the UCI Machine Predictive Maintenance dataset.")
+st.write(
+    "This demo predicts the likelihood of machine failure based on sensor readings. "
+    "The model was trained on the [UCI Machine Predictive Maintenance dataset]"
+    "(https://archive.ics.uci.edu/dataset/601/predictive+maintenance)."
+)
 
 
 # Create two columns
