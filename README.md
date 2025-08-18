@@ -22,7 +22,7 @@ This repository contains a machine learning pipeline and deployment app for pred
   Serialized Random Forest model trained on the AI4I dataset. Can be directly loaded for inference.  
 
 - **`app.py`**  
-  Streamlit app that loads the trained model and provides an interactive web interface for predicting machine failure from user inputs.  
+  Streamlit app that loads the trained model and provides an interactive web interface for predicting machine failure from user inputs. Link to the Streamlit app: https://machine-failure-prediction-nh.streamlit.app/.
 
 - **`requirements.txt`**  
   List of Python dependencies needed to run the training and app.  
