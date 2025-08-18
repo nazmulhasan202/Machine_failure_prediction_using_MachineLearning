@@ -9,12 +9,18 @@ model = joblib.load("failure_prediction_model.joblib")
 st.title("Machine Failure Prediction App")
 st.write("Enter the machine sensor readings to predict if it will fail.")
 
-# Create input fields for all features
-air_temp = st.number_input("Air temperature [K]", value=300.0)
-process_temp = st.number_input("Process temperature [K]", value=310.0)
-rot_speed = st.number_input("Rotational speed [rpm]", value=1500.0)
-torque = st.number_input("Torque [Nm]", value=40.0)
-tool_wear = st.number_input("Tool wear [min]", value=10.0)
+# Create two columns
+col1, col2 = st.columns(2)
+
+with col1:
+    air_temp = st.number_input("Air temperature [K]", value=300.0)
+    process_temp = st.number_input("Process temperature [K]", value=310.0)
+    rot_speed = st.number_input("Rotational speed [rpm]", value=1500.0)
+
+with col2:
+    torque = st.number_input("Torque [Nm]", value=40.0)
+    tool_wear = st.number_input("Tool wear [min]", value=10.0)
+    machine_type = st.selectbox("Machine Type", ["L", "M", "H"])
 
 # Machine Type — from your dummy variables
 machine_type = st.selectbox("Machine Type", ["L", "M", "H"])
