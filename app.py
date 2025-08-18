@@ -6,7 +6,7 @@ import pandas as pd
 # Load trained model
 model = joblib.load("failure_prediction_model.joblib")
 
-st.title("Machine Failure Prediction [Demo App]")
+st.title("Machine Failure Prediction")
 st.write("This demo predicts the likelihood of machine failure based on sensor readings. "
          "The model was trained on the UCI Machine Predictive Maintenance dataset.")
 
