@@ -21,10 +21,7 @@ with col2:
     torque = st.number_input("Torque [Nm]", value=40.0)
     tool_wear = st.number_input("Tool wear [min]", value=10.0)
     machine_type = st.selectbox("Machine Type", ["L", "M", "H"])
-
-# Machine Type — from your dummy variables
-machine_type = st.selectbox("Machine Type", ["L", "M", "H"])
-
+    
 # Convert Machine Type to dummy variables like in training
 type_L = 1 if machine_type == "L" else 0
 type_M = 1 if machine_type == "M" else 0
