@@ -26,7 +26,7 @@ with col1:
 with col2:
     rot_speed = st.slider("Rotational speed [rpm]", min_value=1000.0, max_value=3000.0, value=1500.0, step=10.0)
     torque = st.slider("Torque [Nm]", min_value=0.0, max_value=100.0, value=40.0, step=1.0)
-    tool_wear = st.slider("Tool wear [min]", min_value=0, max_value=250, value=10, step=1.0)
+    tool_wear = st.slider("Tool wear [min]", min_value=0, max_value=250, value=10, step=1)
     
     
 # Convert Machine Type to dummy variables like in training
