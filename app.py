@@ -6,8 +6,10 @@ import pandas as pd
 # Load trained model
 model = joblib.load("failure_prediction_model.joblib")
 
-st.title("Machine Failure Prediction App")
-st.write("Enter the machine sensor readings to predict if it will fail.")
+st.title("Machine Failure Prediction [Demo App]")
+st.write("This demo predicts the likelihood of machine failure based on sensor readings. "
+         "The model was trained on the UCI Machine Predictive Maintenance dataset.")
+
 
 # Create two columns
 col1, col2 = st.columns(2)
