@@ -18,14 +18,16 @@ st.write(
 col1, col2 = st.columns(2)
 
 with col1:
-    air_temp = st.slider("Air temperature [K]", min_value=290.0, max_value=320.0, value=300.0, step=0.1)
-    process_temp = st.slider("Process temperature [K]", min_value=300.0, max_value=340.0, value=310.0, step=0.1)
-    rot_speed = st.slider("Rotational speed [rpm]", min_value=1000.0, max_value=3000.0, value=1500.0, step=10.0)
+    machine_type = st.selectbox("Machine Type", ["L", "M", "H"])
+    air_temp = st.slider("Air temperature [K]", min_value=290.0, max_value=320.0, value=300.0, step=1.0)
+    process_temp = st.slider("Process temperature [K]", min_value=300.0, max_value=340.0, value=310.0, step=1.0)
+    
 
 with col2:
-    torque = st.slider("Torque [Nm]", min_value=0.0, max_value=100.0, value=40.0, step=0.1)
-    tool_wear = st.slider("Tool wear [min]", min_value=0, max_value=250, value=10, step=1)
-    machine_type = st.selectbox("Machine Type", ["L", "M", "H"])
+    rot_speed = st.slider("Rotational speed [rpm]", min_value=1000.0, max_value=3000.0, value=1500.0, step=10.0)
+    torque = st.slider("Torque [Nm]", min_value=0.0, max_value=100.0, value=40.0, step=1.0)
+    tool_wear = st.slider("Tool wear [min]", min_value=0, max_value=250, value=10, step=1.0)
+    
     
 # Convert Machine Type to dummy variables like in training
 type_L = 1 if machine_type == "L" else 0
